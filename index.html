@@ -1,106 +1,10 @@
 <!DOCTYPE html>
-<style>
-    @media screen and (min-width: 1080px) {
-        .FixedHeader {
-            background-color: rgba(0, 0, 0, 1);
-            float: left;
-            position: fixed;
-            top: 0px;
-            right: 0px;
-            width: 90%;
-            height: 10%;
-            border-bottom-style: solid;
-            border-color: #00ff00;
-            font-size: 100%;
-        }
-
-        .sidebar {
-            width: 10%;
-            height: 100vh;
-            background-color: black;
-            position: fixed;
-            left: 0;
-            top: 0;
-            border-right-style: solid;
-            border-color: #00ff00;
-        }
-    }
-
-    @media screen and (max-width: 1080px) {
-        .FixedHeader {
-            background-color: rgba(0, 0, 0, 1);
-            float: left;
-            position: fixed;
-            top: 0px;
-            right: 0px;
-            width: 90%;
-            height: 10%;
-            border-bottom-style: solid;
-            border-color: #00ff00;
-            font-size: 100%;
-        }
-        .sidebar {
-            display: none;
-            width: 10%;
-            height: 100vh;
-            background-color: black;
-            position: fixed;
-            left: 0;
-            top: 10%;
-            border-right-style: solid;
-            border-color: #00ff00;
-        }
-
-        .toggle-sidebar {
-            display: block;
-            background-color: rgba(0, 0, 0, 1);
-            color: white;
-            cursor: pointer;
-            width: 10%;
-            height: 10%;
-            background-color: black;
-            position: fixed;
-            left: 0;
-            top: 0;
-            border-bottom-style: solid;
-            border-color: #00ff00;
-        }
-
-        .content {
-            margin-left: 0;
-        }
-    }
-
-    .content {
-        flex-grow: 1;
-        text-align: center;
-        margin-left: 11%;
-    }
-
-    .content p {
-        color: white;
-    }
-
-    body {
-        background-color: rgba(100, 100, 100, 1);
-        margin-top: 5%;
-        margin-left: 11%;
-    }
-
-    h1 {
-        color: #00ff00;
-        text-align: center;
-    }
-
-    p {
-        color: black;
-    }
-</style>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="C:\Users\Marvin Argollo\Source\Repos\DEAPC\style.css" />
 
     <title>home</title>
 </head>
@@ -108,7 +12,11 @@
     <div class="FixedHeader">
         <h1>Pagina Inicial</h1>
     </div>
-    <a class="toggle-sidebar"><span class="material-symbols-outlined" style="font-size: 400%;">menu</span></a>
+    <div class="toggle-sidebar">
+        <a class="vertical-center">
+            <span class="material-symbols-outlined" style="font-size: 400%;">menu</span>
+        </a>
+    </div>
     <div class="sidebar">
         <div class="content">
             <p>
@@ -136,16 +44,8 @@
     <br>
 
     <p>
-        pagina inicial da aplicação de gestão de inventário
+        pagina inicial da aplicaï¿½ï¿½o de gestï¿½o de inventï¿½rio
     </p>
-
+    <script src="java.js"></script>
 </body>
-<script>
-    const toggleSidebarBtn = document.querySelector('.toggle-sidebar');
-    const sidebar = document.querySelector('.sidebar');
-
-    toggleSidebarBtn.addEventListener('click', () => {
-        sidebar.style.display = sidebar.style.display === 'none' ? 'block' : 'none';
-    });
-</script>
 </html>

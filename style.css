@@ -1,0 +1,108 @@
+@media screen and (max-width: 1080px) {
+    .FixedHeader {
+        background-color: rgba(0, 0, 0, 1);
+        float: left;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        width: 90%;
+        height: 10%;
+        border-bottom-style: solid;
+        border-color: #00ff00;
+        font-size: 100%;
+    }
+
+    .sidebar {
+        width: 10%;
+        height: 100vh;
+        background-color: black;
+        position: fixed;
+        left: 0;
+        top: 0;
+        border-right-style: solid;
+        border-color: #00ff00;
+    }
+
+    .toggle-sidebar {
+        display: none;
+    }
+
+    body {
+        background-color: rgba(100, 100, 100, 1);
+        margin-top: 5%;
+        margin-left: 11%;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .FixedHeader {
+        background-color: rgba(0, 0, 0, 1);
+        float: left;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        width: 91%;
+        height: 10%;
+        border-bottom-style: solid;
+        border-color: #00ff00;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .sidebar {
+        display: none;
+        width: 10%;
+        height: 100vh;
+        background-color: black;
+        position: fixed;
+        left: -1%;
+        top: 10%;
+        border-right-style: solid;
+        border-color: #00ff00;
+    }
+
+    .toggle-sidebar {
+        display: block;
+        background-color: rgba(0, 0, 0, 1);
+        color: white;
+        cursor: pointer;
+        width: 9%;
+        height: 10%;
+        background-color: black;
+        position: fixed;
+        left: 0;
+        top: 0;
+        border-bottom-style: solid;
+        border-right-style: solid;
+        border-color: #00ff00;
+        text-align: center;
+    }
+
+    body {
+        background-color: rgba(100, 100, 100, 1);
+        margin-top: 5%;
+        margin-left: 1%;
+    }
+}
+
+
+.content {
+    flex-grow: 1;
+    text-align: center;
+    margin-left: 11%;
+}
+
+.content p {
+    color: white;
+}
+
+
+
+h1 {
+    color: #00ff00;
+    text-align: center;
+}
+
+p {
+    color: black;
+}
