@@ -1,47 +1,77 @@
 <!DOCTYPE html>
 
 <style>
-    .FixedHeader {
-        background-color: rgba(0, 0, 0, 0.5);
-        float: left;
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        right: 0px;
-        width: 100%;
-        border-bottom-style: solid;
-		border-color: #00ff00;
+    @media screen and (min-width: 960px) {
+        .FixedHeader {
+            background-color: rgba(0, 0, 0, 1);
+            float: left;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            width: 100%;
+            border-bottom-style: solid;
+            border-color: #00ff00;
+        }
+
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background-color: #f1f1f1;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        body {
+            background-color: rgba(100, 100, 100, 1);
+            margin-top: 5%;
+        }
+
+        h1 {
+            color: #00ff00;
+            text-align: center;
+        }
+
+        p {
+            color: white;
+        }
+
+        p:hover {
+            font-size: 20px;
+        }
     }
-	body{
-		background-color: black;
-		margin-top: 5%;
-	}
-	h1 {
-		color: #00ff00;
-		text-align: center;
-	}
-	p{
-		color: white;
-	}
-	p:hover{
-		font-size: 20px;
-	}
 </style>
 <html>
-	<head>
-		<title>
-			home
-		</title>
-	</head>
-	<body>
-		<div class="FixedHeader">
-			<h1>
-				Pagina Incial
-			</h1>
-		</div>
-		<p>
-			pagina inicial da aplicação de gestão de inventario 
-		</p>
-		<br>
-	</body>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<title>
+		home
+	</title>
+</head>
+<body>
+    <div class="FixedHeader">
+        <h1>
+            Pagina Incial
+        </h1>
+    </div>
+    <div class="sidebar">
+        <span class="material-symbols-outlined">
+            home
+        </span>
+    </div>
+    <br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p>
+        pagina inicial da aplicação de gestão de inventario
+    </p>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
 </html>
