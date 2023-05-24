@@ -1,74 +1,24 @@
 <!DOCTYPE html>
 
-<style>
-    @media screen and (min-width: 960px) {
-        .FixedHeader {
-            background-color: #2e2e1f;
-            float: left;
-            position: fixed;
-            top: 0px;
-            right: 0px;
-            width: 90%;
-           
-        }
-
-        .sidebar {
-            width: 10%;
-            height: 100vh;
-            background-color: #f5f5f0;
-            position: fixed;
-            left: 0;
-            top: 0; 
-            border-right-style: solid;
-            border-color: #2e2e1f;
-        }
-
-
-        .content {
-            flex-grow: 1;
-            text-align:center;
-        }
-        .content p{
-        	color:black;
-        	
-        }
-
-
-        body {
-            background-color: white;
-            margin-top: 5%;
-        }
-
-        h1 {
-            color: white;
-            text-align: center;
-        }
-
-        p {
-            color: black;
-        }
-
-    }
-</style>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-	<title>
-		home
-	</title>
+    <link rel="stylesheet" href="styles\style.css" />
+    <title>
+        home
+    </title>
 </head>
 <body>
-	
+
 
     <div class="FixedHeader">
         <h1>
             Pagina Incial
         </h1>
     </div>
-     <canvas id="myCanvas" width="200" height="100"></canvas>
+    <canvas id="myCanvas" width="200" height="100"></canvas>
 
     <div class="sidebar">
         <div class="content">
@@ -102,20 +52,20 @@
             </p>
 
 
-	
+
         </div>
     </div>
-    	<script>
+    <script>
 	var c = document.getElementById("myCanvas");
 	var ctx = c.getContext("2d");
 	ctx.font = "30px Arial";
-	ctx.strokeText("EstatÃ­sticas",300,50);
-	</script>
-    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;align: reight;">
-    <br>
-    
-    <p>
-        
-    </p>    
+	ctx.strokeText("Estatísticas",300,50);
+    </script>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3; align: right;">
+        <br>
+
+        <p>
+
+        </p>
 </body>
 </html>
