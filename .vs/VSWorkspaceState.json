@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\scripts",
+    "\\styles"
   ],
-  "SelectedNode": "\\java.js",
+  "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false
 }
