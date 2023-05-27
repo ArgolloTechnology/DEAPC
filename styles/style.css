@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 
 *{
@@ -7,7 +7,7 @@
     box-sizing: border-box;                     /*NAO ESQUECER * */
     font-family: 'Righteous', cursive;
 }
-/*CORES NORMAIS*/
+
 :root{
     --primary-color: #0e4bf1;
     --panel-color: #FFF;
@@ -15,7 +15,7 @@
     --black-light-color: #707070;
     --border-color: #E6E5E5;
     --toggle-color: #DDD;
-    --caixa1-color: #E0FFFF;                 
+    --caixa1-color: #E0FFFF;                 /*CORES NORMAIS*/
     --caixa2-color: #40E0D0;
     --caixa3-color: #87CEEB;
     --title-icon-color: #CCC;
@@ -25,66 +25,65 @@
     --trans-03: all 0.2s ease;
     
 }
-body{
+    body{
     min-height: 100vh;
-    background-color: var(--primary-color);
-
+    background-color: linear-gradient(to bottom right, red, #ffffff);
 }
- /*CORES DARK MODE*/
+
 body.dark{
     --primary-color: #3a3b3c;
     --panel-color: #242526;
     --text-color: #CCC;
     --black-light-color: #CCC;
-    --border-color: #00ff00;
-    --toggle-color: #FFF;                     
+    --border-color: #4D4C4C;
+    --toggle-color: #FFF;                     /*CORES DARK MODE*/
     --caixa1-color: #3a3b3c;
     --caixa2-color: #3a3b3c;
     --caixa3-color: #3a3b3c;
     --title-icon-color: #FFF;
 }
-nav{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 250px;
-    background-color: var(--panel-color);
-    padding: 10px 14px;
-    border-right: 1px solid var(--border-color);
-    transition: var(--trans-05);
-}
-nav.close{
-    width: 73px;
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 250px;
+        background-color: var(--panel-color);
+        padding: 10px 14px;
+        border-right: 1px solid var(--border-color);
+        transition: var(--trans-05);
+    }
+    nav.close{
+        width: 73px;
        
-}
-nav .logo-nome{
-    display: flex;
-    align-items: center;
+    }
+    nav .logo-nome{
+        display: flex;
+        align-items: center;
 
-}
-nav .imagem-logo{
-    min-width: 45px;
-    display: flex;
-    justify-content: center;
-}
-nav .imagem-logo img{
-    width: 40px;
-    object-fit: cover;          /*FORMATO DO LOGO*/
-    border-radius: 50%;
-}
-nav .logo-nome .logo_nome{
-    font-weight: 600;
-    font-size: 22px;
-    margin-left: 14px;
-    color: var(--text-color);
-    transition: var(--trans-05);
-}
+    }
+    nav .imagem-logo{
+        min-width: 45px;
+        display: flex;
+        justify-content: center;
+    }
+    nav .imagem-logo img{
+        width: 40px;
+        object-fit: cover;          /*FORMATO DO LOGO*/
+        border-radius: 50%;
+    }
+    nav .logo-nome .logo_nome{
+        font-weight: 600;
+        font-size: 22px;
+        margin-left: 14px;
+        color: var(--text-color);
+        transition: var(--trans-05);
+    }
 
-nav.close li a .logo_nome{
-    opacity: 0;
-    pointer-events: none;
-}
+    nav.close li a .logo_nome{
+        opacity: 0;
+        pointer-events: none;
+    }
 nav .menu-items{
     margin-top: 40px;
     height: calc(100% - 90px);
@@ -283,7 +282,7 @@ nav.close ~ .dashboard .top{
 }
 
 .conteudo .titulo .texto{
-    font-size: 24px;
+    font-size: 40px;
     font-weight: 500;
     color: var(--text-color);
     margin-left: 10px;
@@ -293,6 +292,7 @@ nav.close ~ .dashboard .top{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
  
 .conteudo .caixas .caixa{
@@ -303,6 +303,7 @@ nav.close ~ .dashboard .top{
     display: flex;
     align-items: center;
     flex-direction: column;
+    transition: var(--trans-05);
 }
 
 .caixas .caixa i{
@@ -336,6 +337,27 @@ nav.close ~ .dashboard .top{
 
 
 
+.graficos{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 30px;
+    min-height: 200px;
+
+}
+.graficos .box{
+    position: relative;
+    background: var(--panel-color);
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 7px 25px var(--title-icon-color);
+    border-radius: 20px;
+}
+
+
+
 
 
 
@@ -347,7 +369,17 @@ nav.close ~ .dashboard .top{
                      /* RESPONSIVO*/
 
 
-@media (max-width: 1000){
+
+
+
+
+
+
+
+                          /* RESPONSIVO*/
+
+
+@media (max-width: 1000px){
     nav{
         width: 73px;
     }
@@ -386,8 +418,67 @@ nav.close ~ .dashboard .top{
         left: 250px;
         width: calc(100% - 250px);
     }
+    .graficos{
+        grid-template-columns: 1fr;
+        height: auto;
+    }
 }
 
-@media (max-width: 780 px) {
+@media (max-width: 780px) {
+    .conteudo .caixas .caixa{
+        width: calc(100% / 2 - 15px);
+        margin-top: 15px;
+    }
+    .graficos{
+        width: calc(100% / 2 - 15px);
+        margin-top: 15px;
+    }
+}
 
+@media (max-width: 560px) {
+    .conteudo .caixas .caixa{
+        width: 100%;
+        
+    }
+}
+@media (max-width: 500px) {
+    nav{
+        width: 73px;
+    }
+    nav .logo_nome{
+        opacity: 0;
+        pointer-events: none;
+    }
+    nav.close .logo_nome{
+        opacity: 1;
+        pointer-events: auto;
+    }
+    nav li a .link-nome{
+        opacity: 0;
+        pointer-events: none;
+    }
+    nav.close li a .link-nome{
+        opacity: 1;
+        pointer-events: auto;
+    }
+    nav ~ .dashboard{
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+    nav.close ~ .dashboard{
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+    nav ~ .dashboard .top{
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+    nav.close ~ .dashboard .top{
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+    .graficos{
+        left: 73px;
+        width: calc(100% - 73px);
+    }
 }
