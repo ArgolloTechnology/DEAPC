@@ -49,7 +49,7 @@ var myChart = new Chart(myChart2, {
     options: {
         responsive: true,
         maintainAspectRatio: false, // Permite que o tamanho seja ajustado
-        width: 200,    // Defina a largura 
+        width: 10,    // Defina a largura 
         height: 200   // Defina a altura 
         }
   });
