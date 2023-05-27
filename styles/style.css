@@ -352,7 +352,7 @@ nav.close ~ .dashboard .top{
     background: var(--panel-color);
     padding: 20px;
     width: 100%;
-    box-shadow: 0 7px 25px var(--title-icon-color);
+    box-shadow: 0 3px 10px var(--title-icon-color);
     border-radius: 20px;
 }
 
