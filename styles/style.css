@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 
 *{
@@ -27,9 +27,9 @@
 }
     body{
     min-height: 100vh;
-    background-color: var(--primary-color);
-
+    background-color: linear-gradient(to bottom right, red, #ffffff);
 }
+
 body.dark{
     --primary-color: #3a3b3c;
     --panel-color: #242526;
@@ -282,7 +282,7 @@ nav.close ~ .dashboard .top{
 }
 
 .conteudo .titulo .texto{
-    font-size: 24px;
+    font-size: 40px;
     font-weight: 500;
     color: var(--text-color);
     margin-left: 10px;
@@ -292,6 +292,7 @@ nav.close ~ .dashboard .top{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
  
 .conteudo .caixas .caixa{
@@ -302,6 +303,7 @@ nav.close ~ .dashboard .top{
     display: flex;
     align-items: center;
     flex-direction: column;
+    transition: var(--trans-05);
 }
 
 .caixas .caixa i{
@@ -335,6 +337,24 @@ nav.close ~ .dashboard .top{
 
 
 
+.graficos{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 30px;
+    min-height: 200px;
+
+}
+.graficos .box{
+    position: relative;
+    background: var(--panel-color);
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 7px 25px var(--title-icon-color);
+    border-radius: 20px;
+}
 
 
 
@@ -343,10 +363,12 @@ nav.close ~ .dashboard .top{
 
 
 
-                     /* RESPONSIVO*/
 
 
-@media (max-width: 1000){
+                          /* RESPONSIVO*/
+
+
+@media (max-width: 1000px){
     nav{
         width: 73px;
     }
@@ -385,8 +407,67 @@ nav.close ~ .dashboard .top{
         left: 250px;
         width: calc(100% - 250px);
     }
+    .graficos{
+        grid-template-columns: 1fr;
+        height: auto;
+    }
 }
 
-@media (max-width: 780 px) {
+@media (max-width: 780px) {
+    .conteudo .caixas .caixa{
+        width: calc(100% / 2 - 15px);
+        margin-top: 15px;
+    }
+    .graficos{
+        width: calc(100% / 2 - 15px);
+        margin-top: 15px;
+    }
+}
 
+@media (max-width: 560px) {
+    .conteudo .caixas .caixa{
+        width: 100%;
+        
+    }
+}
+@media (max-width: 500px) {
+    nav{
+        width: 73px;
+    }
+    nav .logo_nome{
+        opacity: 0;
+        pointer-events: none;
+    }
+    nav.close .logo_nome{
+        opacity: 1;
+        pointer-events: auto;
+    }
+    nav li a .link-nome{
+        opacity: 0;
+        pointer-events: none;
+    }
+    nav.close li a .link-nome{
+        opacity: 1;
+        pointer-events: auto;
+    }
+    nav ~ .dashboard{
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+    nav.close ~ .dashboard{
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+    nav ~ .dashboard .top{
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+    nav.close ~ .dashboard .top{
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+    .graficos{
+        left: 73px;
+        width: calc(100% - 73px);
+    }
 }
