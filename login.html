@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html lang=”pt”>
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equip="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="styles/login.css" />
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <title> Login </title>
-
-    <script src="scripts\script.js"></script>
-</head>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equip="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styleLogIn.css">
+        <title>LogIn</title>
+    </head>
     <body>
-        <div class="login-container">
-            <h2>Login</h2>
-            <form>
-                <input type="text" id="username" placeholder="Nome" required>
-                <input type="password" id="password" placeholder="Senha" required>
-                <input type="button" value="Login" onclick="validarLogin()">
-            </form>
-        </div>
+        <section class="area-login">
+            <div class="login">
+                <div ></div>
+                    <img src="logo.jpeg">
+                    <form method="POST">
+                    <input type="text" placeholder="Nome de usuario" name="Nome">
+                    <input type="password" placeholder="Senha" name="senha">
+                    <input type="submit" value="Entrar">
+                    </form>
+                </div>
+        </section>
     </body>
 </html>
