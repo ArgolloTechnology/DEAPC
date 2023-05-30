@@ -26,7 +26,6 @@
 
 body {
     min-height: 100vh;
-    background-color: linear-gradient(to bottom right, red, #ffffff);
 }
 
     body.dark {
@@ -383,6 +382,21 @@ nav.close ~ .dashboard .top {
     max-width: 100%;
     box-shadow: 0 7px 25px var(--title-icon-color);
     border-radius: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+form {
+    margin-bottom: 10px;
 }
 
 /* RESPONSIVO*/

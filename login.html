@@ -12,13 +12,16 @@
     <script src="scripts\script.js"></script>
 </head>
     <body>
-        <div class="login-container">
-            <h2>Login</h2>
-            <form>
-                <input type="text" id="username" placeholder="Nome" required>
-                <input type="password" id="password" placeholder="Senha" required>
-                <input type="button" value="Login" onclick="validarLogin()">
-            </form>
-        </div>
+        <section class="area-login">
+            <div class="login">
+                <div></div>
+                <img src="imagens\logo.jpeg">
+                <form method="POST">
+                    <input type="text" placeholder="Nome de usuario" name="Nome" id="username">
+                    <input type="password" placeholder="Senha" name="senha" id="password">
+                    <input type="button" value="Login" onclick="validarLogin()">
+                </form>
+            </div>
+        </section>
     </body>
 </html>
