@@ -14,4 +14,15 @@ sidebarToggle.addEventListener("click", () => {
     sidebar.classList.toggle("close");
     modeToggle.style.display = modeToggle.style.display === 'none' ? 'block' : 'none';
 })
+
+// função para validar o login
+//TODO: diferentes logins
+function validarLogin() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    if (username === "test" && password === "pass") {
+        location.href = "index.html";
+    }
+}
    

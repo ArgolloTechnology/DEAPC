@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang=‚Äùpt‚Äù>
+<html lang=îptî>
 <head>
     <meta charset="UTF-8" />
     <meta http-equip="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="styles/style.css"/>
+
+    <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <title> Painel </title>
 </head>
@@ -23,26 +23,24 @@
             <div class="overview">
                 <div class="titulo">
                     <i class="uil uil-suitcase"></i>
-                    <span class="texto">In√≠cio</span>
+                    <span class="texto">Inventario</span>
                 </div>
             </div>
-            <div class="caixas">
-                <div class="caixa caixa1">
-                    <i class="uil uil-apps"></i>
-                    <span class="texto">Stock</span>
-                    <span class="numero">10,970</span>
-                </div>
-                <div class="caixa caixa2">
-                    <i class="uil uil-comment-chart-line"></i>
-                    <span class="texto">Encomendas</span>
-                    <span class="numero">88</span>
-                </div>
-                <div class="caixa caixa3">
-                    <i class="uil uil-graph-bar"></i>
-                    <span class="texto">Estado</span>
-                    <span class="numero">positivo</span>
-                </div>
-            </div>
+            <form id="item-form">
+                <label for="item-name">Nome do Item:</label>
+                <input type="text" id="item-name" required>
+                <label for="item-quantity">Quantidade:</label>
+                <input type="number" id="item-quantity" required>
+                <button type="submit">Adicionar Item</button>
+            </form>
+
+            <table id="item-table">
+                <tr>
+                    <th>Nome do Item</th>
+                    <th>Quantidade</th>
+                    <th>Admin</th>
+                </tr>
+            </table>
         </div>
     </section>
     <nav>
@@ -102,6 +100,7 @@
     </nav>
 
     <script src="scripts\script.js"></script>
+    <script src="scripts\stocks.js"></script>
 
 </body>
 </html>

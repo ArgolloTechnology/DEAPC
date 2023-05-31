@@ -1,0 +1,213 @@
+commit 650b477a4e3f8db43dc6745890dbcdd962989c8f
+Author: Marvin Argollo <argollomarvin@gmail.com>
+Date:   Tue May 30 16:32:02 2023 +0100
+
+    login update
+
+commit 02894d1820dbc07eb867a7ec6c3b625c20a49050
+Author: Marvin Argollo <argollomarvin@gmail.com>
+Date:   Tue May 30 15:35:58 2023 +0100
+
+    login validation
+
+commit ba6569b811256e3f11128c88b25da5ccc8d9338f
+Author: Marvin Argollo <argollomarvin@gmail.com>
+Date:   Tue May 30 15:17:44 2023 +0100
+
+    login
+
+commit 60d445467384b949b67ca29eb118659c9d20131a
+Author: Marvin Argollo <argollomarvin@gmail.com>
+Date:   Tue May 30 13:42:36 2023 +0100
+
+    correção
+
+commit eee695de73ea4a6491f827fe29305fc4e8622c51
+Merge: 73873ea bde1307
+Author: Marvin Argollo <111886854+ArgolloTechnology@users.noreply.github.com>
+Date:   Sat May 27 16:01:04 2023 +0100
+
+    bug fix
+
+commit 73873eab38c0f75d43caa5ecd1e9462a4e3113c5
+Author: Marvin Argollo <111886854+ArgolloTechnology@users.noreply.github.com>
+Date:   Sat May 27 15:58:28 2023 +0100
+
+    bug fix
+
+commit bde130791861ea11dde78cd95a8acb81898fa5ae
+Author: PauloFerreira2 <132367913+PauloFerreira2@users.noreply.github.com>
+Date:   Sat May 27 13:45:50 2023 +0100
+
+    Update style.css
+
+commit e51522f04d06b8b2a28b53ee60a0e4775bc946b4
+Author: Marvin Argollo <111886854+ArgolloTechnology@users.noreply.github.com>
+Date:   Sat May 27 13:38:39 2023 +0100
+
+    organização
+
+commit fdeeb35d54ab0e109486952bc68ebb72539ad069
+Merge: da63cb7 cae72fd
+Author: Marvin Argollo <111886854+ArgolloTechnology@users.noreply.github.com>
+Date:   Sat May 27 13:20:52 2023 +0100
+
+    paulo updates
+
+commit da63cb75429c548e289abc6f4675e7e639f66a88
+Author: Marvin Argollo <111886854+ArgolloTechnology@users.noreply.github.com>
+Date:   Thu May 25 18:06:29 2023 +0100
+
+    new index
+
+commit cae72fdd50952be1f69d9efa8a44b72987ec4fdd
+Author: PauloFerreira2 <132367913+PauloFerreira2@users.noreply.github.com>
+Date:   Sat May 27 13:16:46 2023 +0100
+
+    Create graficos.js
+
+commit ef8c78ee62956fe2d85cc8c2d4afc3843b899f67
+Author: PauloFerreira2 <132367913+PauloFerreira2@users.noreply.github.com>
+Date:   Sat May 27 13:16:00 2023 +0100
+
+    Create estatistica.html
+
+commit 7f559c2ad56e4c59d2e45fcbf0072fe0fa5188d0
+Author: PauloFerreira2 <132367913+PauloFerreira2@users.noreply.github.com>
+Date:   Sat May 27 13:15:06 2023 +0100
+
+    Delete statistics.html
+
+commit 8a6ddee9af8a3a1a045922e13e86a65913df7546
+Author: PauloFerreira2 <132367913+PauloFerreira2@users.noreply.github.com>
+Date:   Sat May 27 13:13:58 2023 +0100
+
+    Update style.css
+
+commit 611a1e0356232f9b76db9aaff95ba7d2fbd28fc8
+Author: PauloFerreira2 <132367913+PauloFerreira2@users.noreply.github.com>
+Date:   Sat May 27 13:12:57 2023 +0100
+
+    Update index.html
+
+commit dda309da8f5a6d703e9f23379f624ad0554ba7f8
+Author: Marvin Argollo <111886854+ArgolloTechnology@users.noreply.github.com>
+Date:   Thu May 25 18:06:29 2023 +0100
+
+    new index
+
+commit 27ec77fabfb523be6f73f069aa7bd57045ec10f3
+Merge: d2460a8 98224a0
+Author: Marvin Argollo <111886854+ArgolloTechnology@users.noreply.github.com>
+Date:   Wed May 24 16:22:38 2023 +0100
+
+    Merge branch 'main' of https://github.com/ArgolloTechnology/DEAPC
+
+commit d2460a85eb3be5b89a8c4e3ddba2d951c6d30623
+Author: Marvin Argollo <111886854+ArgolloTechnology@users.noreply.github.com>
+Date:   Wed May 24 16:22:10 2023 +0100
+
+    style fix
+
+commit 98224a064815be2490418eeea380bf654e177bb3
+Author: Marvin Argollo <111886854+ArgolloTechnology@users.noreply.github.com>
+Date:   Wed May 24 16:09:52 2023 +0100
+
+    Update index.html
+
+commit 896b7f2a883e408db99a1d7f20234791be468153
+Author: Marvin Argollo <111886854+ArgolloTechnology@users.noreply.github.com>
+Date:   Tue May 23 19:09:17 2023 +0100
+
+    ajuste
+
+commit 3cb267642bc1375a2e83a49e33c1becb7938a3b9
+Merge: d823ea7 75a1925
+Author: Marvin Argollo <111886854+ArgolloTechnology@users.noreply.github.com>
+Date:   Tue May 23 19:09:06 2023 +0100
+
+    ajustes
+
+commit d823ea7812a520eb57db8453cdc6460b35085478
+Author: Marvin Argollo <111886854+ArgolloTechnology@users.noreply.github.com>
+Date:   Tue May 16 19:20:08 2023 +0100
+
+    update borda
+
+commit 75a192510ea96acb9338dd7ce19754d92efc85ec
+Author: Marvin Argollo <argollomarvin@gmail.com>
+Date:   Tue May 23 16:45:35 2023 +0100
+
+    resposivo
+
+commit 5ad6c4945446aad9de1280bafe606eabd5cbe325
+Author: PauloFerreira2 <132367913+PauloFerreira2@users.noreply.github.com>
+Date:   Tue May 23 16:37:59 2023 +0100
+
+    Create statistics
+
+commit f4ac9585d45cdba69f34079058ec73f8260a1f00
+Author: Marvin Argollo <argollomarvin@gmail.com>
+Date:   Tue May 23 15:51:23 2023 +0100
+
+    icons update
+
+commit c09b7aad687b18ce1a0ac7ec6f2db4895d77413c
+Author: Marvin Argollo <argollomarvin@gmail.com>
+Date:   Tue May 23 15:37:52 2023 +0100
+
+    icon bigger
+
+commit 6f7662fefc9a6e505f96146e6f2e418aec86a8e9
+Author: Marvin Argollo <argollomarvin@gmail.com>
+Date:   Tue May 23 15:13:45 2023 +0100
+
+    side bar update
+
+commit ab2c41129c7c77d82d078326c3fa1b9aebaf0cfc
+Author: Marvin Argollo <argollomarvin@gmail.com>
+Date:   Tue May 23 14:52:39 2023 +0100
+
+    sidebar
+
+commit 14e8b6f669c42ad60df0af3271e95f669a972db3
+Author: Marvin Argollo <111886854+ArgolloTechnology@users.noreply.github.com>
+Date:   Tue May 16 19:20:08 2023 +0100
+
+    update borda
+
+commit 8a8c244e602c752f76dbe44158630e35636c5e9a
+Author: Marvin Argollo <argollomarvin@gmail.com>
+Date:   Tue May 16 16:51:32 2023 +0100
+
+    fixedheader
+
+commit 7646c5bb20f209abb18b7f16d12be08be22d3de2
+Author: Marvin Argollo <argollomarvin@gmail.com>
+Date:   Tue May 16 16:28:33 2023 +0100
+
+    git log
+
+commit 24b5c42369c44388ea429a82bfb67bad557de193
+Author: Marvin Argollo <argollomarvin@gmail.com>
+Date:   Tue May 16 16:24:46 2023 +0100
+
+    adição de novas pastas e index.html
+
+commit d9f4717b1974108bb733827db71e53945dbdce60
+Author: Marvin Argollo <argollomarvin@gmail.com>
+Date:   Tue May 2 16:39:50 2023 +0100
+
+    semana 0
+
+commit d880b3c5567912d26499b0c67c6bca2c39fa9d4b
+Author: Marvin Argollo <argollomarvin@gmail.com>
+Date:   Tue May 2 15:42:57 2023 +0100
+
+    teste commit
+
+commit 66ab72adeae35b30a06893078866d061a8cf3edb
+Author: ArgolloTechnology <111886854+ArgolloTechnology@users.noreply.github.com>
+Date:   Tue May 2 14:50:04 2023 +0100
+
+    Initial commit
