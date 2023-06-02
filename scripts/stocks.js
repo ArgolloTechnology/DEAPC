@@ -127,7 +127,7 @@ function renderTable() {
     quantityHeader.textContent = 'Quantidade';
     headerRow.appendChild(quantityHeader);
     var actionsHeader = document.createElement('th');
-    actionsHeader.textContent = 'Ações';
+    actionsHeader.textContent = 'Acoes';
     headerRow.appendChild(actionsHeader);
     table.appendChild(headerRow);
 
@@ -146,23 +146,33 @@ function renderTable() {
         row.appendChild(quantityCell);
 
         var actionsCell = document.createElement('td');
-        var updateButton = document.createElement('button');
-        updateButton.textContent = 'Renomear';
-        updateButton.dataset.index = i;
-        updateButton.addEventListener('click', rename);
-        actionsCell.appendChild(updateButton);
 
-        var deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Excluir';
-        deleteButton.dataset.index = i;
-        deleteButton.addEventListener('click', deleteItem);
-        actionsCell.appendChild(deleteButton);
+        var divButtons = document.createElement('div');
+
+        var renameButton = document.createElement('button');
+        renameButton.className = "button";
+        renameButton.textContent = 'Renomear';
+        renameButton.dataset.index = i;
+        renameButton.addEventListener('click', rename);
+        divButtons.appendChild(renameButton);
 
         var updateButton = document.createElement('button');
+        updateButton.className = "button";
         updateButton.textContent = 'Atualizar Quantidade';
         updateButton.dataset.index = i;
         updateButton.addEventListener('click', updateQuantity);
-        actionsCell.appendChild(updateButton);
+        divButtons.appendChild(updateButton);
+
+        var deleteButton = document.createElement('button');
+        deleteButton.className = "button";
+        deleteButton.textContent = 'Excluir';
+        deleteButton.dataset.index = i;
+        deleteButton.addEventListener('click', deleteItem);
+        divButtons.appendChild(deleteButton);
+
+        actionsCell.appendChild(divButtons);
+
+        divButtons.className = "buttonsDiv";
 
         row.appendChild(actionsCell);
 
