@@ -53,7 +53,7 @@ function calcularTotalItens() {
 
     // Atualiza o conteúdo da div com o total de itens
     var totalItensElement = document.getElementById('totalItens');
-    totalItensElement.textContent = total;
+    if (totalItensElement) totalItensElement.textContent = total;
 
     return total;
 }

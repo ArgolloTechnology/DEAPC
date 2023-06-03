@@ -468,6 +468,11 @@ tr:hover {
     display: flex;
     justify-content: space-between;
 }
+.quantityContainer span {
+    padding: 5% 0 5%;
+}
+
+
 /* RESPONSIVO*/
 @media (max-width: 1000px) {
     .dashboard {
