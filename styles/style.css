@@ -464,11 +464,12 @@ tr:hover {
         margin-bottom: 10px;
     }
 
+.quantityContainer {
+    display: flex;
+    justify-content: space-between;
+}
 /* RESPONSIVO*/
-
-
 @media (max-width: 1000px) {
-
     .dashboard {
         position: relative;
         left: calc(15% - 5px);
