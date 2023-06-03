@@ -113,7 +113,6 @@ function loadItems() {
     }
 }
 
-// Função para renderizar a tabela
 function renderTable() {
     // Limpa o conteúdo da tabela
     table.innerHTML = '';
@@ -142,7 +141,29 @@ function renderTable() {
         row.appendChild(nameCell);
 
         var quantityCell = document.createElement('td');
-        quantityCell.textContent = item.quantity;
+
+        var quantityContainer = document.createElement('div');
+        quantityContainer.className = 'quantityContainer';
+
+        var decreaseButton = document.createElement('button');
+        decreaseButton.className = 'button';
+        decreaseButton.textContent = '-';
+        decreaseButton.dataset.index = i;
+        decreaseButton.addEventListener('click', decreaseQuantity);
+        quantityContainer.appendChild(decreaseButton);
+
+        var quantityValue = document.createElement('span');
+        quantityValue.textContent = item.quantity;
+        quantityContainer.appendChild(quantityValue);
+
+        var increaseButton = document.createElement('button');
+        increaseButton.className = 'button';
+        increaseButton.textContent = '+';
+        increaseButton.dataset.index = i;
+        increaseButton.addEventListener('click', increaseQuantity);
+        quantityContainer.appendChild(increaseButton);
+
+        quantityCell.appendChild(quantityContainer);
         row.appendChild(quantityCell);
 
         var actionsCell = document.createElement('td');
@@ -150,35 +171,62 @@ function renderTable() {
         var divButtons = document.createElement('div');
 
         var renameButton = document.createElement('button');
-        renameButton.className = "button";
+        renameButton.className = 'button';
         renameButton.textContent = 'Renomear';
         renameButton.dataset.index = i;
         renameButton.addEventListener('click', rename);
         divButtons.appendChild(renameButton);
 
         var updateButton = document.createElement('button');
-        updateButton.className = "button";
+        updateButton.className = 'button';
         updateButton.textContent = 'Atualizar Quantidade';
         updateButton.dataset.index = i;
         updateButton.addEventListener('click', updateQuantity);
         divButtons.appendChild(updateButton);
 
         var deleteButton = document.createElement('button');
-        deleteButton.className = "button";
-        deleteButton.textContent = 'Excluir';
+        deleteButton.className = 'button';
+
+        var deleteIcon = document.createElement('span');
+        deleteIcon.className = 'material-symbols-outlined';
+        deleteIcon.textContent = 'delete_forever';
+        deleteButton.appendChild(deleteIcon);
+
         deleteButton.dataset.index = i;
         deleteButton.addEventListener('click', deleteItem);
         divButtons.appendChild(deleteButton);
 
         actionsCell.appendChild(divButtons);
 
-        divButtons.className = "buttonsDiv";
+        divButtons.className = 'buttonsDiv';
 
         row.appendChild(actionsCell);
 
         table.appendChild(row);
     }
 }
+
+function increaseQuantity(event) {
+    var index = event.target.dataset.index;
+    var item = items[index];
+    var newQuantity = parseInt(item.quantity) + 1;
+    item.quantity = newQuantity;
+    saveItems();
+    renderTable();
+}
+
+function decreaseQuantity(event) {
+    var index = event.target.dataset.index;
+    var item = items[index];
+    var newQuantity = parseInt(item.quantity) - 1;
+    if (newQuantity < 0) newQuantity = 0;
+    item.quantity = newQuantity;
+    saveItems();
+    renderTable();
+}
+
+// Restante do código...
+
 
 // Event listener para o evento de submit do formulário
 form.addEventListener('submit', addItem);
