@@ -21,8 +21,17 @@ function addItem(event) {
         quantity: itemQuantity
     };
 
+    var isNew = true;
+
+    for (var i = 0; i < items.length; i++) {
+        if (items[i].name === item.name) {
+            items[i] = item;
+            isNew = false;
+        }
+    }
+
     // Adiciona o item ao array de itens
-    items.push(item);
+    if(isNew)items.push(item);
 
     // Limpa os campos do formulário
     itemNameInput.value = '';
@@ -33,6 +42,8 @@ function addItem(event) {
 
     // Atualiza a tabela
     renderTable();
+
+    hideWindow();
 }
 
 // Função para editar um item
@@ -186,6 +197,7 @@ function renderTable() {
 
         var deleteButton = document.createElement('button');
         deleteButton.className = 'button';
+        deleteButton.style.backgroundColor = 'red';
 
         var deleteIcon = document.createElement('span');
         deleteIcon.className = 'material-symbols-outlined';
@@ -221,6 +233,20 @@ function decreaseQuantity(event) {
     var newQuantity = parseInt(item.quantity) - 1;
     if (newQuantity < 0) newQuantity = 0;
     item.quantity = newQuantity;
+    saveItems();
+    renderTable();
+}
+
+function showWindow() {
+    var window = document.getElementById('item-form');
+    window.style.display = 'flex';
+    saveItems();
+    renderTable();
+}
+
+function hideWindow() {
+    var window = document.getElementById('item-form');
+    window.style.display = 'none';
     saveItems();
     renderTable();
 }
