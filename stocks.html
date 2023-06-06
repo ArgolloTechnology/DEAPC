@@ -28,7 +28,7 @@
                     <span class="texto">Inventario</span>
                 </div>
             </div>
-            <div id="form-container">
+            <div id="form-container" action="scripts/data.php">
                 <button class="button" style="margin-bottom:5px" onclick="showWindow()">Novo Item</button>
                 <form id="item-form">
                     <label for="item-name">Nome do Item:</label>
@@ -103,6 +103,10 @@
             </ul>
         </div>
     </nav>
+
+    <div id="box">
+        <a href="https://argotech.itch.io"><img id="cat" src="imagens/cat.gif" alt="Gato"></a>
+    </div>
 
     <script src="scripts\script.js" defer></script>
     <script src="scripts\stocks.js" defer></script>
