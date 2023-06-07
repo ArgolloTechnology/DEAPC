@@ -9,13 +9,9 @@ var table = document.getElementById('item-table');
 
 // Função para adicionar um item
 function addItem(event) {
-    event.preventDefault(); // Evita que o formulário seja enviado
-
-    // Obtém os valores do formulário
+    event.preventDefault(); 
     var itemName = itemNameInput.value;
     var itemQuantity = itemQuantityInput.value;
-
-    // Cria um objeto item
     var item = {
         name: itemName,
         quantity: itemQuantity
@@ -30,17 +26,13 @@ function addItem(event) {
         }
     }
 
-    // Adiciona o item ao array de itens
     if(isNew)items.push(item);
 
-    // Limpa os campos do formulário
     itemNameInput.value = '';
     itemQuantityInput.value = '';
 
-    // Salva os itens no localStorage
     saveItems();
 
-    // Atualiza a tabela
     renderTable();
 
     hideWindow();
@@ -50,20 +42,15 @@ function addItem(event) {
 function editItem(event) {
     var index = event.target.dataset.index;
 
-    // Obtém o item do array
     var item = items[index];
 
-    // Preenche os campos do formulário com os valores do item
     itemNameInput.value = item.name;
     itemQuantityInput.value = item.quantity;
 
-    // Remove o item do array
     items.splice(index, 1);
 
-    // Salva os itens no localStorage
     saveItems();
 
-    // Atualiza a tabela
     renderTable();
 }
 
@@ -71,13 +58,10 @@ function editItem(event) {
 function deleteItem(event) {
     var index = event.target.dataset.index;
 
-    // Remove o item do array
     items.splice(index, 1);
 
-    // Salva os itens no localStorage
     saveItems();
 
-    // Atualiza a tabela
     renderTable();
 }
 
@@ -86,12 +70,10 @@ function updateQuantity(event) {
     var index = event.target.dataset.index;
     var newQuantity = prompt('Digite a nova quantidade:');
 
-    // Atualiza a quantidade do item no array
     if (newQuantity !== null) {
         items[index].quantity = newQuantity;
     }
 
-    // Salva os itens no localStorage
     saveItems();
 
     // Atualiza a tabela
@@ -102,12 +84,10 @@ function rename(event) {
     var index = event.target.dataset.index;
     var newName = prompt('novo nome:');
 
-    // Atualiza a quantidade do item no array
     if (newName !== null) {
         items[index].name = newName;
     }
 
-    // Atualiza a tabela
     renderTable();
 }
 
@@ -125,10 +105,8 @@ function loadItems() {
 }
 
 function renderTable() {
-    // Limpa o conteúdo da tabela
     table.innerHTML = '';
 
-    // Cabeçalho da tabela
     var headerRow = document.createElement('tr');
     var nameHeader = document.createElement('th');
     nameHeader.textContent = 'Nome do Item';
@@ -141,7 +119,6 @@ function renderTable() {
     headerRow.appendChild(actionsHeader);
     table.appendChild(headerRow);
 
-    // Linhas da tabela
     for (var i = 0; i < items.length; i++) {
         var item = items[i];
 
@@ -251,12 +228,22 @@ function hideWindow() {
     renderTable();
 }
 
-
-// Event listener para o evento de submit do formulário
 form.addEventListener('submit', addItem);
 
-// Carrega os itens do localStorage
 loadItems();
 
-// Renderiza a tabela inicialmente
 renderTable();
+
+function peekCat() {
+    var cat = document.getElementById("cat");
+    cat.style.top = "20%";
+    setTimeout(hideCat, 10000);
+}
+
+function hideCat() {
+    var cat = document.getElementById("cat");
+    cat.style.top = "200px";
+    setTimeout(peekCat, 100000);
+}
+
+setTimeout(peekCat, 1000);
