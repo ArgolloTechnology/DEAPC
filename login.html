@@ -5,23 +5,40 @@
     <meta http-equip="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles/login.css" />
+    <link rel="stylesheet" href=C:\Users\user\Desktop\deapc\css\login.css />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <title> Login </title>
 
     <script src="scripts\script.js"></script>
 </head>
     <body>
-        <section class="area-login">
-            <div class="login">
-                <div></div>
-                <img src="imagens\logo.jpeg">
-                <form method="POST">
-                    <input type="text" placeholder="Nome de usuario" name="Nome" id="username">
-                    <input type="password" placeholder="Senha" name="senha" id="password">
-                    <input type="button" value="Login" onclick="validarLogin()">
-                </form>
+        <section> 
+            <div class="caixa">
+                <div class="valor">
+                    <form method="POST">
+                        <h2>Login</h2>
+                        <div class="input-caixa">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <input type="Nome-de-Usuario" required id="username">
+                            <label for="">Nome de Usuário</label>
+                        </div>
+                        <div class="input-caixa">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                            <input type="password" required id="password">
+                            <label for="">Password</label>
+                        </div>
+                        <div class="forget">
+                            <label for=""><input type="checkbox">Lembrar-me <a href="#">Esqueceu-se da Palavra passe?</a></label>
+                        </div>
+                        <input type="button" value="Login" onclick="validarLogin()">
+                        <div class="registar">
+                            <p>Não tem uma Conta? <a href="#">Registar</a></p>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
+        <script  type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"> </script> 
+        <script nomodule src="https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" > </script>
     </body>
 </html>
