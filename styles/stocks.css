@@ -132,15 +132,15 @@ tr:hover {
     cursor: pointer;
 }
 
-    /* Estilo para botões quando o mouse está sobre eles */
-    .button:hover {
-        background-color: #45a049;
-    }
+/* Estilo para botões quando o mouse está sobre eles */
+.button:hover {
+    background-color: #45a049;
+}
 
-    /* Estilo para botões quando estão pressionados */
-    .button:active {
-        background-color: #3e8e41;
-    }
+/* Estilo para botões quando estão pressionados */
+.button:active {
+    background-color: #3e8e41;
+}
 
 .buttonsDiv {
     display: flex;

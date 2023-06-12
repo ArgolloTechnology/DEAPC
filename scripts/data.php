@@ -1,21 +1,37 @@
 <?php
-$db = new SQLite3('test.db');
+// Conectar ao banco de dados SQLite
+$db = new PDO('sqlite:items.db');
 
-// Criação da tabela Viaturas
-$db->exec("CREATE TABLE IF NOT EXISTS Viaturas(id INTEGER PRIMARY KEY, marca TEXT, preco INT)");
-$db->exec("INSERT INTO Viaturas(marca, preco) VALUES('Fiat', 21644)");
-$db->exec("INSERT INTO Viaturas(marca, preco) VALUES('Toyota', 35445)");
-$db->exec("INSERT INTO Viaturas(marca, preco) VALUES('Cupra', 29090)");
+// Verificar se a tabela de itens existe, caso contrário, criar a tabela
+$db->exec('CREATE TABLE IF NOT EXISTS items (name TEXT, quantity INTEGER)');
 
-echo "<h3>Tabela de Viaturas </h3>";
-$sql = "SELECT * FROM Viaturas";
-$result = $db->query($sql);
-
-echo "<table>\n<th>Id</th><th>Marca</th><th>Preço</th>\n";
-while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-    echo '<tr><td>' . $row['id'] . '</td><td>' . $row['marca'] . '</td><td>' . $row['preco'] . "</td></tr>\n";
+// Função para salvar um item
+function saveItem($name, $quantity) {
+    global $db;
+    $statement = $db->prepare('INSERT INTO items (name, quantity) VALUES (:name, :quantity)');
+    $statement->bindValue(':name', $name);
+    $statement->bindValue(':quantity', $quantity, PDO::PARAM_INT);
+    $statement->execute();
 }
-echo '</table>';
 
-unset($db);
+// Função para carregar os itens
+function loadItems() {
+    global $db;
+    $statement = $db->query('SELECT * FROM items');
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
+// Verificar se foi feita uma requisição POST para salvar um item
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $itemName = $_POST['item-name'] ?? '';
+    $itemQuantity = $_POST['item-quantity'] ?? '';
+
+    if (!empty($itemName) && is_numeric($itemQuantity)) {
+        saveItem($itemName, $itemQuantity);
+    }
+}
+
+// Carregar os itens e retornar como JSON
+$items = loadItems();
+echo json_encode($items);
 ?>
