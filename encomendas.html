@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="styles\encomendas.css">
     <title> Painel Encomendas</title>
 </head>
 <body>
@@ -85,15 +86,36 @@
                     <span class="texto">Encomendas</span>
                 </div>
             </div>
-
-        </div>
-
-        
-
+            <div id="form-container" action="scripts/data.php">
+                <button class="button" style="margin-bottom:5px" onclick="showWindow()">Novo Item</button>
+                <form id="item-form">
+                    <label for="item-name">Nome do Cliente:</label>
+                    <input type="text" id="item-name" required>
+                    <label for="item-produto">Produto:</label>
+                    <input type="text" id="item-produto" required>
+                    <label for="item-morada">Morada:</label>
+                    <input type="text" id="item-morada" required>
+                    <label for="item-quantity">Quantidade:</label>
+                    <input type="number" id="item-quantity" required>
+                    <label for="item-preço">Preço:</label>
+                    <input type="number" id="item-preço" required>
+                    <button type="submit">Adicionar Item</button>
+                    <button id="fechar-janela">Fechar</button>
+                </form>
+            </div>
+            <table class="table" id="item-table">
+                <tr>
+                    <th>Nome do Item</th>
+                    <th>Quantidade</th>
+                    <th>Produto</th>
+                    <th>Morada</th>
+                    <th>Admin</th>
+                </tr>
+            </table>
         </div>
     </section>
-    <script src="scripts\script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="scripts\graficos.js"></script>
+    <script src="scripts\script.js" defer></script>
+    <script src="scripts\encomendas.js" defer></script>
+
 </body>
 </html>

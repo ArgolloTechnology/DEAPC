@@ -57,9 +57,29 @@ function calcularTotalItens() {
 
     return total;
 }
+function calcularTotalencomendas() {
+    var total = 0;
 
-// Exemplo de uso
+    // Carrega os itens do localStorage
+    var storedItems = JSON.parse(localStorage.getItem('encomenda'));
+
+    if (storedItems) {
+        for (var i = 0; i < storedItems.length; i++) {
+            var item = storedItems[i];
+            total += parseInt(item.quantity);
+        }
+    }
+
+    // Atualiza o conteúdo da div com o total de itens
+    var totalItensElement = document.getElementById('totalencomenda');
+    if (totalItensElement) totalItensElement.textContent = total;
+
+    return total;
+}
+
 var totalItens = calcularTotalItens();
+var totalencomenda = calcularTotalencomendas();
 console.log("Total de Itens:", totalItens);
+console.log("Total de Ecomendas:", totalencomenda);
 
    
