@@ -1,13 +1,10 @@
-// Array para armazenar os itens
 var items = [];
 
-// Referências aos elementos do formulário e da tabela
 var form = document.getElementById('item-form');
 var itemNameInput = document.getElementById('item-name');
 var itemQuantityInput = document.getElementById('item-quantity');
 var table = document.getElementById('item-table');
 
-// Função para adicionar um item
 function addItem(event) {
     event.preventDefault(); 
     var itemName = itemNameInput.value;
@@ -38,7 +35,6 @@ function addItem(event) {
     hideWindow();
 }
 
-// Função para editar um item
 function editItem(event) {
     var index = event.target.dataset.index;
 
@@ -54,7 +50,6 @@ function editItem(event) {
     renderTable();
 }
 
-// Função para excluir um item
 function deleteItem(event) {
     var index = event.target.dataset.index;
 
@@ -65,7 +60,6 @@ function deleteItem(event) {
     renderTable();
 }
 
-// Função para atualizar a quantidade de um item
 function updateQuantity(event) {
     var index = event.target.dataset.index;
     var newQuantity = prompt('Digite a nova quantidade:');
@@ -76,7 +70,6 @@ function updateQuantity(event) {
 
     saveItems();
 
-    // Atualiza a tabela
     renderTable();
 }
 
@@ -91,12 +84,10 @@ function rename(event) {
     renderTable();
 }
 
-// Função para salvar os itens no localStorage
 function saveItems() {
     localStorage.setItem('items', JSON.stringify(items));
 }
 
-// Função para carregar os itens do localStorage
 function loadItems() {
     var storedItems = localStorage.getItem('items');
     if (storedItems) {

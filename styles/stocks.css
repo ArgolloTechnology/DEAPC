@@ -75,7 +75,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
-/* Estilo para a tabela */
+
 table {
     width: 100%;
     font-family: Arial, sans-serif;
@@ -84,7 +84,6 @@ table {
     color: #333;
 }
 
-/* Estilo para o cabeçalho da tabela */
 th {
     background-color: #f2f2f2;
     text-align: left;
@@ -92,7 +91,6 @@ th {
     border-radius: 12px;
 }
 
-/* Estilo para as células de dados */
 td {
     padding: 8px;
     border-radius: 12px;
@@ -101,20 +99,13 @@ td {
 tr {
     border-style: double;
     border-radius: 12px;
+    background-color: #f9f9f9;
 }
 
-    /* Estilo para as células de dados em linhas alternadas */
-    tr:nth-child(even) {
-        background-color: #f9f9f9;
-    }
-
-
-/* Estilo para a tabela quando o mouse está sobre ela */
 table:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para quando o mouse está sobre as células de dados */
 tr:hover {
     background-color: #e6e6e6;
 }
@@ -132,12 +123,10 @@ tr:hover {
     cursor: pointer;
 }
 
-/* Estilo para botões quando o mouse está sobre eles */
 .button:hover {
     background-color: #45a049;
 }
 
-/* Estilo para botões quando estão pressionados */
 .button:active {
     background-color: #3e8e41;
 }
