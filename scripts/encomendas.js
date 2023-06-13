@@ -1,7 +1,7 @@
 // Array para armazenar os itens
 var items = [];
 
-// Referências aos elementos do formulário e da tabela
+// ReferÃªncias aos elementos do formulÃ¡rio e da tabela
 var form = document.getElementById('item-form');
 var itemNameInput = document.getElementById('item-name');
 var itemProductInput = document.getElementById('item-produto');
@@ -12,7 +12,7 @@ var table = document.getElementById('item-table');
 var fecharJanelaButton = document.getElementById('fechar-janela');
 fecharJanelaButton.addEventListener('click', fecharJanela);
 
-// Função para adicionar um item
+// FunÃ§Ã£o para adicionar um item
 function addItem(event) {
     event.preventDefault();
     var itemName = itemNameInput.value;
@@ -51,13 +51,13 @@ function addItem(event) {
 
     hideWindow();
 }
-//Função fechar janela
+//FunÃ§Ã£o fechar janela
 function fecharJanela() {
     var janelaAdicaoItem = document.getElementById('item-form');
     janelaAdicaoItem.style.display = 'none';
 }
 
-// Função para editar um item
+// FunÃ§Ã£o para editar um item
 function editItem(event) {
     var index = event.target.dataset.index;
 
@@ -73,7 +73,7 @@ function editItem(event) {
     renderTable();
 }
 
-// Função para excluir um item
+// FunÃ§Ã£o para excluir um item
 function deleteItem(event) {
     var index = event.target.dataset.index;
 
@@ -84,7 +84,7 @@ function deleteItem(event) {
     renderTable();
 }
 
-// Função para atualizar a quantidade de um item
+// FunÃ§Ã£o para atualizar a quantidade de um item
 function updateQuantity(event) {
     var index = event.target.dataset.index;
     var newQuantity = prompt('Digite a nova quantidade:');
@@ -110,12 +110,12 @@ function rename(event) {
     renderTable();
 }
 
-// Função para salvar os itens no localStorage
+// FunÃ§Ã£o para salvar os itens no localStorage
 function saveItems() {
     localStorage.setItem('encomenda', JSON.stringify(items));
 }
 
-// Função para carregar os itens do localStorage
+// FunÃ§Ã£o para carregar os itens do localStorage
 function loadItems() {
     var storedItems = localStorage.getItem('encomenda');
     if (storedItems) {
@@ -134,7 +134,7 @@ function renderTable() {
     nameProduct.textContent = 'Produto';
     headerRow.appendChild(nameProduct);
     var quantityPreco = document.createElement('th');
-    quantityPreco.textContent = 'Preço';
+    quantityPreco.textContent = 'PreÃ§o';
     headerRow.appendChild(quantityPreco);
     var nameMorada = document.createElement('th');
     nameMorada.textContent = 'Morada';
@@ -275,4 +275,3 @@ form.addEventListener('submit', addItem);
 loadItems();
 
 renderTable();
-
