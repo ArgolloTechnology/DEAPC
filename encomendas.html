@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="stylesheet" href="styles\encomendas.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title> Painel Encomendas</title>
 </head>
 <body>
@@ -22,7 +23,7 @@
         <div class="menu-items">
             <ul class="nav-links">
                 <li>
-                    <a href="index.html">
+                    <a href="paginainicial.php">
                         <i class="uil uil-estate"></i>
                         <span class="link-nome">Menu Inicial</span>
                     </a>
@@ -87,7 +88,7 @@
                 </div>
             </div>
             <div id="form-container" action="scripts/data.php">
-                <button class="button" style="margin-bottom:5px" onclick="showWindow()">Novo Item</button>
+                <button class="button" style="margin-bottom:5px" onclick="showWindow()">Nova Encomenda</button>
                 <form id="item-form">
                     <label for="item-name">Nome do Cliente:</label>
                     <input type="text" id="item-name" required>
@@ -98,7 +99,7 @@
                     <label for="item-quantity">Quantidade:</label>
                     <input type="number" id="item-quantity" required>
                     <label for="item-preço">Preço:</label>
-                    <input type="number" id="item-preço" required>
+                    <input type="number" id="item-preco" required>
                     <button type="submit">Adicionar Item</button>
                     <button id="fechar-janela">Fechar</button>
                 </form>

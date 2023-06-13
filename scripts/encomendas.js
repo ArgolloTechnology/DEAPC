@@ -4,6 +4,9 @@ var items = [];
 // Referências aos elementos do formulário e da tabela
 var form = document.getElementById('item-form');
 var itemNameInput = document.getElementById('item-name');
+var itemProductInput = document.getElementById('item-produto');
+var itemPriceInput = document.getElementById('item-preco');
+var itemMoradaInput = document.getElementById('item-morada');
 var itemQuantityInput = document.getElementById('item-quantity');
 var table = document.getElementById('item-table');
 var fecharJanelaButton = document.getElementById('fechar-janela');
@@ -13,10 +16,16 @@ fecharJanelaButton.addEventListener('click', fecharJanela);
 function addItem(event) {
     event.preventDefault();
     var itemName = itemNameInput.value;
+    var itemProduct = itemProductInput.value;
+    var itemPrice = itemPriceInput.value;
     var itemQuantity = itemQuantityInput.value;
+    var itemMorada = itemMoradaInput.value;
     var item = {
         name: itemName,
-        quantity: itemQuantity
+        product: itemProduct,
+        price: itemPrice,
+        quantity: itemQuantity,
+        morada: itemMorada
     };
 
     var isNew = true;
@@ -31,6 +40,9 @@ function addItem(event) {
     if (isNew) items.push(item);
 
     itemNameInput.value = '';
+    itemProductInput.value = '';
+    itemPriceInput.value = '';
+    itemMoradaInput.value = '';
     itemQuantityInput.value = '';
 
     saveItems();
@@ -41,7 +53,7 @@ function addItem(event) {
 }
 //Função fechar janela
 function fecharJanela() {
-    var janelaAdicaoItem = document.getElementById('janela-adicao-item');
+    var janelaAdicaoItem = document.getElementById('item-form');
     janelaAdicaoItem.style.display = 'none';
 }
 
@@ -121,6 +133,9 @@ function renderTable() {
     var nameProduct = document.createElement('th');
     nameProduct.textContent = 'Produto';
     headerRow.appendChild(nameProduct);
+    var quantityPreco = document.createElement('th');
+    quantityPreco.textContent = 'Preço';
+    headerRow.appendChild(quantityPreco);
     var nameMorada = document.createElement('th');
     nameMorada.textContent = 'Morada';
     headerRow.appendChild(nameMorada);
@@ -142,11 +157,18 @@ function renderTable() {
         row.appendChild(nameCell);
 
         var nameProduct = document.createElement('td');
+        nameProduct.textContent = item.product;
         row.appendChild(nameProduct);
 
         var quantityCell = document.createElement('td');
+        
+        
+        var quantityPreco = document.createElement('td');
+        quantityPreco.textContent = item.price;
+    	row.appendChild(quantityPreco);
 
         var nameMorada = document.createElement('td');
+        nameMorada.textContent = item.morada;
         row.appendChild(nameMorada);
 
 
